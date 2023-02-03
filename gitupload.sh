@@ -1,20 +1,13 @@
 #! /bin/bash
 
 
-tmux new -d -s pfgu "
 while : 
 do
 	git add .
-	git commit -m "siva"
+	time=$(date)
+	git commit -m "siva $time"
 	git push
-done" 
+done
 
 
-
-tmux new -d -s pfgh-page "
-while :
-do
-	sleep 300;
-	npm run deploy
-done"
 
